@@ -1,5 +1,8 @@
 Import-Module ActiveDirectory
     Write-Host "ES RECOMENDABLE SEGUIR EL PASO A PASO DEL MENU"
+
+# En el punto 1 solo se muestra por pantalla el menú.
+
     do {
     # 1) Menu.
     Write-Host "1. Informacion del dominio"
@@ -8,8 +11,17 @@ Import-Module ActiveDirectory
     Write-Host "4. Crear usuario"
     Write-Host "5. Salir"
 
+# En el punto 2 el usuario eligirá la opción que quiera realizar.
+
     # 2) Opcion.
     $opcion = Read-Host "Elige una opcion"
+
+<# En el punto 3, en la opción 1 guardo los datos en variables para luegos mostrarlas con Write-Host
+en la opción 2 se almacenará en una variable lo que escriba el usuario para posteriormente cuando se crea la OU se haga con el valor que escribio el usuario
+en la opción 3 se hará de forma similar a la anterior tanto para guardar el valor de la OU dentro de la ruta como la creación del grupo que el usuario desee
+en la opción 4 se hará similar a los anteriores, el usuario guardará sus datos en variables y con ellas crearemos el usuario.
+en la opción 5 saldrá del bucle
+#>
 
     # 3) Se ejecuta una de estas opciones.
     switch ($opcion) {
